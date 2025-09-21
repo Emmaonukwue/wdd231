@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Chamber of Commerce - Directory</title>
+  <meta name="description" content="Business directory page of the Lagos Chamber of Commerce">
+  <meta name="author" content="Emmanuel Onukwue">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses and fostering economic growth in Lagos.">
+  <meta property="og:image" content="images/social-share.png">
+  <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Chamber Logo" class="logo">
+        <div>
+          <h1>Lagos Chamber of Commerce</h1>
+          <p class="tag">Networking • Growth • Community</p>
+        </div>
+      </div>
+      
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2 class="page-title">Member Directory</h2>
+
+    <!-- View toggle buttons -->
+    <div class="view-toggle">
+      <button id="gridBtn" class="btn active">Grid View</button>
+      <button id="listBtn" class="btn">List View</button>
+    </div>
+
+    <!-- Directory container -->
+    <section id="membersContainer" class="directory grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>info@lagoscoc.com | +234 702 504 0241</p>
+      <p>&copy; <span id="year"></span> 💕 Emmanuel Onukwue 💕 Lagos, Nigeria</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/chamber.js" defer></script>
+</body>
+</html>
