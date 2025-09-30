@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Chamber of Commerce - Join</title>
+  <meta name="description" content="New user join page of the Lagos Chamber of Commerce">
+  <meta name="author" content="Emmanuel Onukwue">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses and fostering economic growth in Lagos.">
+  <meta property="og:image" content="images/social-share.png">
+  <meta property="og:url" content="https://emmaonukwue.github.io/wdd231/chamber/join.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Chamber Logo" class="logo">
+        <div>
+          <h1>Lagos Chamber of Commerce</h1>
+          <p class="tag">Networking • Growth • Community</p>
+        </div>
+      </div>
+      
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Lagos Chamber of Commerce</h1>
+    <h2 class="page-title">Join Page</h2>
+
+    <form method="get" action="thankyou.html">
+        <label for="firstName">First Name:</label>
+        <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required/>
+
+        <label for="firstName">Last Name:</label>
+        <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="last-name" required/>
+
+        <label for="firstName">Organizational Title:</label>
+        <input name="organizationTitle" id="" title="Organizational Title" type="text" autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$"/>
+
+        <label for="email">Email:</label>
+        <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required/>
+
+        <label for="membershipLevel">Membership Level:</label>
+        <select name="membershipLevel" id="membershipLevel" required>
+            <option value="NP Membership">NP Membership</option>
+            <option value="Bronze Membership">Bronze Membership</option>
+            <option value="Silver Membership">Silver Membership</option>
+            <option value="Gold Membership">Gold Membership</option>
+            </select>
+        
+        <label for="description">Description:</label>
+        <textarea title="Description" name="description"></textarea>
+        
+        
+        
+
+
+        
+
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>info@lagoscoc.com | +234 702 504 0241</p>
+      <p>&copy; <span id="year"></span> 💕 Emmanuel Onukwue 💕 Lagos, Nigeria</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script src="scripts/chamber.js" defer></script>
+
+</body>
+</html>

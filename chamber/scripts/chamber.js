@@ -3,13 +3,15 @@ document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent =
   "Last Modified: " + document.lastModified;
 
-// Fetch members and display
+// Fetch members and display (only if container exists)
 async function loadMembers() {
   try {
+    const container = document.getElementById("membersContainer");
+    if (!container) return; // Skip if not on directory page
+
     const response = await fetch("data/members.json");
     const members = await response.json();
 
-    const container = document.getElementById("membersContainer");
     container.innerHTML = "";
 
     members.forEach(member => {
@@ -36,23 +38,26 @@ async function loadMembers() {
 }
 loadMembers();
 
-// Toggle grid / list view
+// Toggle grid / list view (only if buttons exist)
 const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
 const directory = document.getElementById("membersContainer");
 
-gridBtn.addEventListener("click", () => {
-  directory.classList.add("grid");
-  directory.classList.remove("list");
-  gridBtn.classList.add("active");
-  listBtn.classList.remove("active");
-});
-listBtn.addEventListener("click", () => {
-  directory.classList.add("list");
-  directory.classList.remove("grid");
-  listBtn.classList.add("active");
-  gridBtn.classList.remove("active");
-});
+if (gridBtn && listBtn && directory) {
+  gridBtn.addEventListener("click", () => {
+    directory.classList.add("grid");
+    directory.classList.remove("list");
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
+  });
+
+  listBtn.addEventListener("click", () => {
+    directory.classList.add("list");
+    directory.classList.remove("grid");
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  });
+}
 
 // Hamburger menu
 const hamburger = document.querySelector(".hamburger");
@@ -63,4 +68,41 @@ if (hamburger && mainNav) {
     const expanded = hamburger.getAttribute("aria-expanded") === "true" || false;
     hamburger.setAttribute("aria-expanded", !expanded);
   });
+}
+
+// Weather API (OpenWeatherMap demo) – only if weather section exists
+const currentWeather = document.getElementById("current-weather");
+const forecastList = document.getElementById("forecast-list");
+
+if (currentWeather && forecastList) {
+  const apiKey = "4b41eb525012c29a62f987097eac8614"; // replace with your API key
+  const city = "Lagos";
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+  async function fetchWeather() {
+    try {
+      // Current weather
+      const response = await fetch(weatherUrl);
+      const data = await response.json();
+      currentWeather.textContent = `${data.weather[0].description}, ${data.main.temp}°C`;
+
+      // Forecast
+      const fResponse = await fetch(forecastUrl);
+      const fData = await fResponse.json();
+      forecastList.innerHTML = "";
+
+      const noonForecasts = fData.list.filter(item => item.dt_txt.includes("12:00:00"));
+      noonForecasts.slice(0, 3).forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${new Date(item.dt_txt).toLocaleDateString()}: ${item.main.temp}°C, ${item.weather[0].description}`;
+        forecastList.appendChild(li);
+      });
+    } catch (error) {
+      currentWeather.textContent = "Unable to load weather.";
+      forecastList.innerHTML = "<li>Error loading forecast.</li>";
+    }
+  }
+
+  fetchWeather();
 }

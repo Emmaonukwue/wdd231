@@ -94,6 +94,7 @@ body {
   border-radius: 6px;
   border: 1px solid #ccc;
   background: white;
+  color: var(--primary);
   cursor: pointer;
 }
 .view-toggle .btn.active {
@@ -149,7 +150,37 @@ body {
 .badge.silver { background:#f2f5f8; color:#495057; }
 .badge.gold { background:#fff7e6; color:#8a5300; }
 
-/* Footer */
+/* Hero */
+.hero { position: relative; text-align: center; color: white; }
+.hero-img { width: 100%; height: 300px; object-fit: cover; }
+.hero-text {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  padding: 1rem 2rem; border-radius: 10px;
+}
+.btn {
+  display: inline-block; margin-top: 10px;
+  background: #ff9900; color: white;
+  padding: 0.5rem 1rem; border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Widgets */
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem; padding: 2rem;
+}
+.widget {
+  background: #f4f4f4; padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.widget h3 { margin-top: 0; color: #004466; }
+
+
+/* Footer 
 .site-footer {
   background: #fff;
   border-top: 1px solid #e6e6e6;
@@ -158,7 +189,54 @@ body {
   text-align: center;
   font-size: 14px;
   color: var(--muted);
+} 
+  */
+
+/* Footer */
+.site-footer {
+  background: #004466;
+  color: white;
+  padding: 2rem 1rem;
 }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-grid h3 { margin-top: 0; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid ul li { margin: 0.3rem 0; }
+.footer-grid a { color: #ffcc00; text-decoration: none; }
+.footer-grid a:hover { text-decoration: underline; }
+.footer-grid address { font-style: normal; }
+
+/* Socials */
+.social-list {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.social-list a {
+  background: #fff;
+  color: #004466;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive footer */
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .social-list { justify-content: center; }
+}
+
 
 /* Responsive */
 @media (max-width: 720px) {

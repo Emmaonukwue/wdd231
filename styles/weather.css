@@ -1,0 +1,75 @@
+/* Global */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  color: #222;
+  background: #f9fafb;
+}
+
+/* Main */
+main {
+  padding: 1rem;
+  margin: 2rem;
+}
+
+
+.card {
+    border: 1px solid #5d6f67;
+    background-color: #f6f0da;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #description {
+    text-transform: capitalize;
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #current-temp {
+    font-size: 2rem;
+    color: #537279;
+    margin: .3rem 0;
+}
+
+/* Footer */
+footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+footer p {
+    margin: 0 8px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social a img {
+  width: 24px;   /* small size */
+  height: 24px;  /* keeps square */
+  margin: 0 8px;
+  vertical-align: middle;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+footer .social a img:hover {
+  transform: scale(1.2);
+}
