@@ -15,8 +15,15 @@ async function loadMembers() {
     container.innerHTML = "";
 
     members.forEach(member => {
+      let label = ""
+      if (member.membership === 3) label = "gold";
+      else if (member.membership === 2) label = "silver";
+      else label = "member";
+      
       const card = document.createElement("div");
       card.classList.add("card");
+
+      
 
       card.innerHTML = `
         <div class="thumb">
@@ -27,7 +34,8 @@ async function loadMembers() {
           <p>${member.address}</p>
           <p>${member.phone}</p>
           <a href="${member.website}" target="_blank">Visit Website</a>
-          <span class="badge ${member.level}">${member.level}</span>
+          <br>
+          <span class="badge ${label}">${label}</span>
         </div>
       `;
       container.appendChild(card);
@@ -37,6 +45,52 @@ async function loadMembers() {
   }
 }
 loadMembers();
+
+// Spotlight: show 2–3 random gold/silver members on homepage
+async function loadSpotlight() {
+  const container = document.getElementById("spotlight-container");
+  if (!container) return;
+
+  try {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
+
+    // Normalize membership levels
+    members.forEach(m => {
+      if (m.membership === 3) m.level = "gold";
+      else if (m.membership === 2) m.level = "silver";
+      else m.level = "member";
+    });
+
+    // Filter only gold/silver
+    const premium = members.filter(m => m.level === "gold" || m.level === "silver");
+
+    // Shuffle and pick 2–3
+    const selection = premium.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    container.innerHTML = "";
+    selection.forEach(member => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <div class="thumb">
+          <img src="images/${member.image}" alt="${member.name}">
+        </div>
+        <div class="meta">
+          <h3>${member.name}</h3>
+          <p>${member.note}</p>
+          <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+          <span class="badge ${member.level}">${member.level}</span>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Error loading spotlight:", err);
+  }
+}
+loadSpotlight();
+
 
 // Toggle grid / list view (only if buttons exist)
 const gridBtn = document.getElementById("gridBtn");

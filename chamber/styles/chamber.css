@@ -179,6 +179,16 @@ body {
 }
 .widget h3 { margin-top: 0; color: #004466; }
 
+.spotlight {
+  margin: 2rem 0;
+}
+.spotlight h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+
 
 /* Footer 
 .site-footer {
