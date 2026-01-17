@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Sunrise Bakery",
+    "address": "12 Broad Street, Lagos Island",
+    "phone": "+234-802-123-4567",
+    "website": "#",
+    "image": "1.png",
+    "membership": 3,
+    "note": "Artisanal breads and pastries daily."
+  },
+  {
+    "name": "TechWorld Computers",
+    "address": "45 Tech Park, Ikeja",
+    "phone": "+234-803-987-6543",
+    "website": "#",
+    "image": "2.png",
+    "membership": 2,
+    "note": "IT repairs, sales, and managed services."
+  },
+  {
+    "name": "Green Cafe",
+    "address": "9 Victoria Island Promenade",
+    "phone": "+234-805-444-1122",
+    "website": "#",
+    "image": "3.png",
+    "membership": 1,
+    "note": "Local organic cafe and meeting space."
+  },
+  {
+    "name": "Book Hub",
+    "address": "3 Freedom Way, Surulere",
+    "phone": "+234-809-333-2211",
+    "website": "#",
+    "image": "4.png",
+    "membership": 1,
+    "note": "New & used books, stationery and events."
+  },
+  {
+    "name": "Plaza Hotel",
+    "address": "88 Marina, Lagos Island",
+    "phone": "+234-805-111-2233",
+    "website": "#",
+    "image": "5.png",
+    "membership": 3,
+    "note": "Business travel friendly, conference rooms available."
+  },
+  {
+    "name": "Fresh Market Co.",
+    "address": "Market Road, Mushin",
+    "phone": "+234-802-555-6677",
+    "website": "#",
+    "image": "6.png",
+    "membership": 2,
+    "note": "Wholesale fruits & vegetables."
+  },
+  {
+    "name": "Design Studio NG",
+    "address": "101 Lekki-Epe Expressway",
+    "phone": "+234-808-222-7788",
+    "website": "#",
+    "image": "7.png",
+    "membership": 2,
+    "note": "Branding, web design and creative direction."
+  }
+]
