@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Onukwue | WDD231 - Home Page</title>
+  <link rel="icon" href="images/favicon.ico">
+  <meta name="description" content="WDD231 Course Home Page - Emmanuel Onukwue">
+  <meta name="author" content="Emmanuel Onukwue">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:locale" content="">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="branding">
+      <img src="images/mdesign-logo.png" alt="corporate logo representing me" class="logo">
+      <span class="site-name">Emmanuel Onukwue</span>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="chamber/">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/profile.webp" alt="Emmanuel Onukwue" class="student-photo">
+        <div class="intro">
+        <h1>Emmanuel Onukwue | WDD231 - Home Page</h1>
+        <p>Hello, I am <strong>Emmanuel Onukwue</strong>, a Software Development student. This page demonstrates responsive web design, accessibility, and JavaScript interactivity for <strong>WDD231</strong>.</p>
+        </div>
+    </section>
+
+  
+    <section>
+      <h2>About This Page</h2>
+      <p>This course homepage demonstrates responsive design, semantic HTML, CSS layout, and dynamic JavaScript features required in WDD231.</p>
+    </section>
+
+    <section>
+      <h2>Course Certificate</h2>
+      <div class="course-controls">
+        <button data-filter="all">All Courses</button>
+        <button data-filter="wdd">WDD Courses</button>
+        <button data-filter="cse">CSE Courses</button>
+      </div>
+      <div id="course-list" class="course-list"></div>
+      <p id="total-credits"></p>
+    </section>
+
+    <section>
+      <h2>Learning Goals</h2>
+      <p>My goals include improving responsive design, accessibility, JavaScript interactivity, and clean coding practices while following professional standards.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/emmaonukwue" target="_blank"><img src="images/github.png" alt="github social logo"></a> |
+      <a href="https://linkedin.com/in/oemma" target="_blank"><img src="images/linkedin.png" alt="linkedin social logo"></a> |
+      <a href="#"><img src="images/twitter.png" alt="twitter social logo"></a>
+    </div>
+    <p>&copy; <span id="year"></span> 💕 Emmanuel Onukwue 💕 Lagos, Nigeria </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

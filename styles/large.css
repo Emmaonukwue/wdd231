@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+  header {
+    padding: 0.6rem 2rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* Hero section side by side */
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .student-photo {
+    margin-bottom: 0;
+  }
+
+  .intro {
+    max-width: 500px;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
