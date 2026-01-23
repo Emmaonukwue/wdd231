@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Chamber of Commerce - Home</title>
+  <meta name="description" content="Home page of the Lagos Chamber of Commerce">
+  <meta name="author" content="Emmanuel Onukwue">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses and fostering economic growth in Lagos.">
+  <meta property="og:image" content="https://emmaonukwue.github.io/wdd231/chamber/images/logo.png">
+  <meta property="og:url" content="https://emmaonukwue.github.io/wdd231/chamber/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Chamber Logo" class="logo">
+        <div>
+          <h1>Lagos Chamber of Commerce</h1>
+          <p class="tag">Networking • Growth • Community</p>
+        </div>
+      </div>
+      
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1 class="wrap">Lagos Chamber of Commerce - Home</h1>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Lagos City Business District" class="hero-img">
+      <div class="hero-text">
+        <h2>Welcome to Lagos Chamber of Commerce</h2>
+        <p>Connecting businesses. Building the future.</p>
+        <a href="directory.html" class="btn">Explore Directory</a>
+      </div>
+    </section>
+
+    <div class="wrap">
+
+    <!-- Info Widgets -->
+    <section class="widgets">
+      <div class="widget" id="events">
+        <h3>Upcoming Events</h3>
+        <ul>
+          <li>Business Networking — Sept 30</li>
+          <li>Export Workshop — Oct 5</li>
+          <li>Tech Expo — Oct 10</li>
+        </ul>
+      </div>
+
+      <div class="widget" id="current-event">
+        <h3>Current Event</h3>
+        <p>📢 Lagos International Trade Fair is LIVE this week! Visit our members’ booths to explore new business opportunities.</p>
+      </div>
+
+      <div class="widget" id="weather">
+        <h3>Current Weather</h3>
+        <p id="current-weather">Loading...</p>
+      </div>
+
+      <div class="widget" id="forecast">
+        <h3>3-Day Forecast</h3>
+        <ul id="forecast-list">
+          <li>Loading...</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured Members (Gold/Silver Spotlight) -->
+    <section class="spotlight wrap">
+      <h2>Featured Members</h2>
+      <div id="spotlight-container" class="directory grid"></div>
+    </section>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>About Us</h3>
+        <p>The Lagos Chamber of Commerce fosters business growth, innovation, and partnerships across Lagos and beyond.</p>
+        <p>&copy; <span id="year"></span> 💕 Emmanuel Onukwue 💕</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="#">Join Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <address>
+          Lagos, Nigeria<br>
+          Email: info@lagoschamber.org<br>
+          Phone: +234 702 504 0241
+        </address>
+        <div class="social-list">
+          <a href="#">FB</a>
+          <a href="#">TW</a>
+          <a href="#">IN</a>
+        </div>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/chamber.js" defer></script>
+</body>
+</html>
