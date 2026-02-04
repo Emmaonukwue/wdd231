@@ -3,27 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lagos Chamber of Commerce - Directory</title>
-  <meta name="description" content="Business directory page of the Lagos Chamber of Commerce">
-  <meta name="author" content="Emmanuel Onukwue">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
-  <!-- Social Media Meta -->
-  <meta property="og:title" content="Lagos Chamber of Commerce">
-  <meta property="og:description" content="Connecting businesses and fostering economic growth in Lagos.">
-  <meta property="og:image" content="images/logo.png">
-  <meta property="og:url" content="https://emmaonukwue.github.io/wdd231/chamber/directory.html">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- CSS -->
+  <title>Thank You - Lagos Chamber of Commerce</title>
   <link rel="stylesheet" href="styles/chamber.css">
 </head>
 <body>
@@ -53,17 +33,19 @@
   </header>
 
   <main class="wrap">
-    <h1>Lagos Chamber of Commerce</h1>
-    <h2 class="page-title">Member Directory</h2>
+    <h1>Thank You for Joining!</h1>
+    <p>We appreciate your interest in becoming a member of the Lagos Chamber of Commerce. Here is the information you submitted:</p>
 
-    <!-- View toggle buttons -->
-    <div class="view-toggle">
-      <button id="gridBtn" class="btn active">Grid View</button>
-      <button id="listBtn" class="btn">List View</button>
+    <div class="card">
+      <div class="meta">
+        <p><strong>First Name:</strong> <span id="outFirst"></span></p>
+        <p><strong>Last Name:</strong> <span id="outLast"></span></p>
+        <p><strong>Email:</strong> <span id="outEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="outPhone"></span></p>
+        <p><strong>Organization:</strong> <span id="outOrg"></span></p>
+        <p><strong>Date Submitted:</strong> <span id="outDate"></span></p>
+      </div>
     </div>
-
-    <!-- Directory container -->
-    <section id="membersContainer" class="directory grid"></section>
   </main>
 
   <!-- FOOTER -->
@@ -102,6 +84,16 @@
     </div>
   </footer>
 
-  <script src="scripts/chamber.js" defer></script>
+  <script>
+    // Get URL params
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("outFirst").textContent = params.get("firstName");
+    document.getElementById("outLast").textContent = params.get("lastName");
+    document.getElementById("outEmail").textContent = params.get("email");
+    document.getElementById("outPhone").textContent = params.get("phone");
+    document.getElementById("outOrg").textContent = params.get("organization");
+    document.getElementById("outDate").textContent = params.get("timestamp");
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
