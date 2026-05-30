@@ -41,6 +41,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.site-title {
+    font-weight: 700;
+    margin: 0;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -188,6 +194,13 @@ body {
 
 .widget ul {
   padding: 1rem; 
+}
+
+.widget-heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 .spotlight {
