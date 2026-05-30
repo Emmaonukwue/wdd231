@@ -6,7 +6,7 @@ document.getElementById("lastModified").textContent =
 // Fetch members and display
 async function loadMembers() {
   try {
-    const response = await fetch("data/members.json");
+    const response = await fetch("/data/members.json");
     const members = await response.json();
 
     const container = document.getElementById("membersContainer");
@@ -18,7 +18,7 @@ async function loadMembers() {
 
       card.innerHTML = `
         <div class="thumb">
-          <img src="images/${member.image}" alt="${member.name}">
+          <img src="/images/${member.image}" alt="${member.name}">
         </div>
         <div class="meta">
           <h3>${member.name}</h3>
