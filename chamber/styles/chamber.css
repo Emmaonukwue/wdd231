@@ -112,6 +112,24 @@ body {
   grid-template-columns: 1fr;
 }
 
+/* Hide member images in list view */
+.directory.list .card .thumb {
+  display: none;
+}
+
+/* Show member images only in grid view */
+.directory.grid .card .thumb {
+  display: block;
+}
+
+.directory.list .card {
+  display: block;
+}
+
+.directory.list .card .meta {
+  width: 100%;
+}
+
 /* Card */
 .card {
   background: var(--card);
