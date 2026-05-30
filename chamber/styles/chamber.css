@@ -72,6 +72,7 @@ body {
   font-weight: 600;
 }
 
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -159,6 +160,11 @@ body {
   background: rgba(0,0,0,0.7);
   padding: 1rem 2rem; border-radius: 10px;
 }
+
+.hero-text h1 {
+  font-size: 20px; margin-bottom: 0.5rem;
+}
+
 .btn {
   display: inline-block; margin-top: 10px;
   background: #b30000; color: white;
