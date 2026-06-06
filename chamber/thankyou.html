@@ -68,6 +68,7 @@
         <p><strong>Last Name:</strong> <span id="outLast"></span></p>
         <p><strong>Email:</strong> <span id="outEmail"></span></p>
         <p><strong>Phone:</strong> <span id="outPhone"></span></p>
+        <p><strong>Organization Title:</strong> <span id="outOrgTitle"></span></p>
         <p><strong>Organization:</strong> <span id="outOrg"></span></p>
         <p><strong>Date Submitted:</strong> <span id="outDate"></span></p>
       </div>
@@ -119,6 +120,7 @@
     document.getElementById("outLast").textContent = params.get("lastName");
     document.getElementById("outEmail").textContent = params.get("email");
     document.getElementById("outPhone").textContent = params.get("phone");
+    document.getElementById("outOrgTitle").textContent = params.get("organizationTitle");
     document.getElementById("outOrg").textContent = params.get("organization");
     document.getElementById("outDate").textContent = params.get("timestamp");
     document.getElementById("year").textContent = new Date().getFullYear();
