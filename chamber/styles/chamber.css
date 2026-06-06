@@ -416,6 +416,14 @@ form textarea {
       margin-bottom: 0.25rem;
     }
 
+    .card-desc {
+      font-size: 0.85rem;
+    }
+
+    .card-desc.np-desc {
+      color: #2b6e3b;
+    }
+
     .card-price {
       font-size: 0.85rem;
       color: var(--gray-600);
@@ -471,7 +479,7 @@ form textarea {
       to { opacity: 1; transform: scale(1); }
     }
 
-    .modal-content h3 {
+    .modal-content h2 {
       font-size: 1.7rem;
       margin-bottom: 1rem;
       color: var(--primary);

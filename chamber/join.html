@@ -69,10 +69,10 @@
               <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required/>
 
               <label for="lastName">Last Name:</label>
-              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="last-name" required/>
+              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="family-name" required/>
 
-              <label for="organizationTitle">Organizational Title:</label>
-              <input name="organizationTitle" id="organizationTitle" title="Organizational Title" type="text" autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$"/>
+              <label for="organization">Organizational Title:</label>
+              <input name="organization" id="organization" title="Organizational Title" type="text" autocomplete="organization" pattern="^[A-Za-z\- ]{7,}$"/>
 
               <label for="email">Email:</label>
               <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required/>
@@ -83,6 +83,7 @@
 
               <label for="membershipLevel">Membership Level:</label>
               <select name="membershipLevel" id="membershipLevel" required>
+                  <option value="" disabled selected>Select Membership Level</option>
                   <option value="NP Membership">NP Membership</option>
                   <option value="Bronze Membership">Bronze Membership</option>
                   <option value="Silver Membership">Silver Membership</option>
@@ -90,7 +91,7 @@
                   </select>
               
               <label for="description">Description:</label>
-              <textarea title="Description" name="description"></textarea>
+              <textarea id="description" title="Description" name="description"></textarea>
 
               <input type="hidden" name="timestamp" id="timestamp">
 
@@ -105,36 +106,37 @@
           <div class="membership-card" data-modal="modalNP">
             <div class="card-level">🌱 NP Membership</div>
             <div class="card-price">Non-Profit • No Fee</div>
-            <div class="card-desc" style="font-size:0.85rem; color:#2b6e3b;">For NGOs & charities</div>
+            <div class="card-desc np-desc">For NGOs & charities</div>
             <button class="card-link" data-modal-open="modalNP">Learn More →</button>
           </div>
           <!-- Bronze Card -->
           <div class="membership-card" data-modal="modalBronze">
             <div class="card-level">🥉 Bronze Membership</div>
             <div class="card-price">₦150,000 / year</div>
-            <div class="card-desc" style="font-size:0.85rem;">Essential visibility & networking</div>
+            <div class="card-desc">Essential visibility & networking</div>
             <button class="card-link" data-modal-open="modalBronze">Learn More →</button>
           </div>
           <!-- Silver Card -->
           <div class="membership-card" data-modal="modalSilver">
             <div class="card-level">🥈 Silver Membership</div>
             <div class="card-price">₦350,000 / year</div>
-            <div class="card-desc" style="font-size:0.85rem;">Enhanced exposure & premium leads</div>
+            <div class="card-desc">Enhanced exposure & premium leads</div>
             <button class="card-link" data-modal-open="modalSilver">Learn More →</button>
           </div>
           <!-- Gold Card -->
           <div class="membership-card" data-modal="modalGold">
             <div class="card-level">🥇 Gold Membership</div>
             <div class="card-price">₦650,000 / year</div>
-            <div class="card-desc" style="font-size:0.85rem;">Elite status + Spotlight advertising</div>
+            <div class="card-desc">Elite status + Spotlight advertising</div>
             <button class="card-link" data-modal-open="modalGold">Learn More →</button>
           </div>
         </div>
     </div>
+    </div>
 
     <div id="modalNP" class="modal">
       <div class="modal-content">
-        <h3>🌱 NP Membership Benefits</h3>
+        <h2>🌱 NP Membership Benefits</h2>
         <ul>
           <li>✔ Free for registered non-profits</li>
           <li>✔ Listing in online directory</li>
@@ -147,7 +149,7 @@
     </div>
     <div id="modalBronze" class="modal">
       <div class="modal-content">
-        <h3>🥉 Bronze Membership Benefits</h3>
+        <h2>🥉 Bronze Membership Benefits</h2>
         <ul>
           <li>✔ Directory listing with logo</li>
           <li>✔ 10% discount on event tickets</li>
@@ -160,7 +162,7 @@
     </div>
     <div id="modalSilver" class="modal">
       <div class="modal-content">
-        <h3>🥈 Silver Membership Benefits</h3>
+        <h2>🥈 Silver Membership Benefits</h2>
         <ul>
           <li>✔ All Bronze benefits +</li>
           <li>✔ Spotlight position on home page (rotating 2x/month)</li>
@@ -174,7 +176,7 @@
     </div>
     <div id="modalGold" class="modal">
       <div class="modal-content">
-        <h3>🥇 Gold Membership Benefits</h3>
+        <h2>🥇 Gold Membership Benefits</h2>
         <ul>
           <li>✔ All Silver benefits +</li>
           <li>✔ Premium Spotlight on home page (guaranteed weekly)</li>
@@ -186,6 +188,7 @@
         </ul>
         <button class="close-modal">Close</button>
       </div>
+    </div>
     </div>
 
   </main>
