@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Chamber of Commerce - Join Page</title>
+  <meta name="description" content="Join the Lagos Chamber of Commerce and connect with other businesses">
+  <meta name="author" content="Emmanuel Onukwue">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Lagos Chamber of Commerce">
+  <meta property="og:description" content="Connecting businesses and fostering economic growth in Lagos.">
+  <meta property="og:image" content="https://emmaonukwue.github.io/wdd231/chamber/images/logo.png">
+  <meta property="og:url" content="https://emmaonukwue.github.io/wdd231/chamber/join.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <!--- JS -->
+    <script src="scripts/chamber.js" defer></script>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Chamber Logo" class="logo">
+        <div>
+          <p class="site-title">Lagos Chamber of Commerce</p>
+          <p class="tag">Networking • Growth • Community</p>
+        </div>
+      </div>
+      
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wrap">
+    <h1>Lagos Chamber of Commerce - Join Page</h1>
+
+    <div class="wrap join-layout">
+        <div class="form-container">
+
+          <form method="get" action="thankyou.html" id="membershipForm">
+              <label for="firstName">First Name:</label>
+              <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required/>
+
+              <label for="lastName">Last Name:</label>
+              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="last-name" required/>
+
+              <label for="organizationTitle">Organizational Title:</label>
+              <input name="organizationTitle" id="organizationTitle" title="Organizational Title" type="text" autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$"/>
+
+              <label for="email">Email:</label>
+              <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required/>
+
+              <label for="phone">Mobile Phone</label>
+              <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+              
+
+              <label for="membershipLevel">Membership Level:</label>
+              <select name="membershipLevel" id="membershipLevel" required>
+                  <option value="NP Membership">NP Membership</option>
+                  <option value="Bronze Membership">Bronze Membership</option>
+                  <option value="Silver Membership">Silver Membership</option>
+                  <option value="Gold Membership">Gold Membership</option>
+                  </select>
+              
+              <label for="description">Description:</label>
+              <textarea title="Description" name="description"></textarea>
+
+              <input type="hidden" name="timestamp" id="timestamp">
+
+              <button type="submit" class="btn active">Submit Application</button>
+
+          </form>
+        </div>
+
+    <div class="membership-sidebar">
+        <div class="cards-grid">
+          <!-- NP Card -->
+          <div class="membership-card" data-modal="modalNP">
+            <div class="card-level">🌱 NP Membership</div>
+            <div class="card-price">Non-Profit • No Fee</div>
+            <div class="card-desc" style="font-size:0.85rem; color:#2b6e3b;">For NGOs & charities</div>
+            <button class="card-link" data-modal-open="modalNP">Learn More →</button>
+          </div>
+          <!-- Bronze Card -->
+          <div class="membership-card" data-modal="modalBronze">
+            <div class="card-level">🥉 Bronze Membership</div>
+            <div class="card-price">₦150,000 / year</div>
+            <div class="card-desc" style="font-size:0.85rem;">Essential visibility & networking</div>
+            <button class="card-link" data-modal-open="modalBronze">Learn More →</button>
+          </div>
+          <!-- Silver Card -->
+          <div class="membership-card" data-modal="modalSilver">
+            <div class="card-level">🥈 Silver Membership</div>
+            <div class="card-price">₦350,000 / year</div>
+            <div class="card-desc" style="font-size:0.85rem;">Enhanced exposure & premium leads</div>
+            <button class="card-link" data-modal-open="modalSilver">Learn More →</button>
+          </div>
+          <!-- Gold Card -->
+          <div class="membership-card" data-modal="modalGold">
+            <div class="card-level">🥇 Gold Membership</div>
+            <div class="card-price">₦650,000 / year</div>
+            <div class="card-desc" style="font-size:0.85rem;">Elite status + Spotlight advertising</div>
+            <button class="card-link" data-modal-open="modalGold">Learn More →</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="modalNP" class="modal">
+      <div class="modal-content">
+        <h3>🌱 NP Membership Benefits</h3>
+        <ul>
+          <li>✔ Free for registered non-profits</li>
+          <li>✔ Listing in online directory</li>
+          <li>✔ Access to community events (2 per year)</li>
+          <li>✔ Eligibility for grants & partner programs</li>
+          <li>✔ Newsletter subscription & networking</li>
+        </ul>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+    <div id="modalBronze" class="modal">
+      <div class="modal-content">
+        <h3>🥉 Bronze Membership Benefits</h3>
+        <ul>
+          <li>✔ Directory listing with logo</li>
+          <li>✔ 10% discount on event tickets</li>
+          <li>✔ Monthly business briefings</li>
+          <li>✔ Access to member meetups</li>
+          <li>✔ Basic training webinars (2 per year)</li>
+        </ul>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+    <div id="modalSilver" class="modal">
+      <div class="modal-content">
+        <h3>🥈 Silver Membership Benefits</h3>
+        <ul>
+          <li>✔ All Bronze benefits +</li>
+          <li>✔ Spotlight position on home page (rotating 2x/month)</li>
+          <li>✔ 20% discount on major conferences</li>
+          <li>✔ Priority access to leadership roundtables</li>
+          <li>✔ Featured in member newsletter interview</li>
+          <li>✔ Advertising slot in chamber digital magazine</li>
+        </ul>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+    <div id="modalGold" class="modal">
+      <div class="modal-content">
+        <h3>🥇 Gold Membership Benefits</h3>
+        <ul>
+          <li>✔ All Silver benefits +</li>
+          <li>✔ Premium Spotlight on home page (guaranteed weekly)</li>
+          <li>✔ VIP Invitations to Presidential Gala</li>
+          <li>✔ Free full-page ad in annual directory</li>
+          <li>✔ Exclusive CEO roundtable & mentorship</li>
+          <li>✔ 30% off all training & events + 2 free tickets to annual summit</li>
+          <li>✔ Priority booth selection at trade fairs</li>
+        </ul>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+
+  </main>
+
+
+<!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>About Us</h3>
+        <p>The Lagos Chamber of Commerce fosters business growth, innovation, and partnerships across Lagos and beyond.</p>
+        <p>&copy; <span id="year"></span> 💕 Emmanuel Onukwue 💕</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active">Join Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <address>
+          Lagos, Nigeria<br>
+          Email: info@lagoschamber.org<br>
+          Phone: +234 702 504 0241
+        </address>
+        <div class="social-list">
+          <a href="#">FB</a>
+          <a href="#">TW</a>
+          <a href="#">IN</a>
+        </div>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

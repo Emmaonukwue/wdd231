@@ -160,3 +160,107 @@ if (currentWeather && forecastList) {
 
   fetchWeather();
 }
+
+
+// Set hidden timestamp to current datetime when form is loaded
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+  const now = new Date();
+  timestampField.value = now.toISOString();
+}
+
+// MODAL LOGIC for membership cards
+const modals = document.querySelectorAll('.modal');
+const modalButtons = document.querySelectorAll('[data-modal-open]');
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    const closeBtn = modal.querySelector('.close-modal');
+    if (closeBtn) closeBtn.focus();
+  }
+}
+
+function closeModal(modal) {
+  modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+// Add click handlers to modal trigger buttons
+modalButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const modalId = btn.getAttribute('data-modal-open');
+    if (modalId) openModal(modalId);
+  });
+});
+
+// Allow clicking on the card itself to open modal
+const cards = document.querySelectorAll('.membership-card');
+cards.forEach(card => {
+  const modalId = card.getAttribute('data-modal');
+  if (modalId) {
+    card.addEventListener('click', (e) => {
+      if (e.target.classList && e.target.classList.contains('card-link')) return;
+      openModal(modalId);
+    });
+  }
+});
+
+// Close modal with close button or clicking backdrop
+modals.forEach(modal => {
+  const closeBtn = modal.querySelector('.close-modal');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal(modal));
+  }
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal(modal);
+  });
+});
+
+// Press Escape key to close modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    modals.forEach(modal => {
+      if (modal.style.display === 'flex') closeModal(modal);
+    });
+  }
+});
+
+// Footer dynamic year and last modified
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.innerText = new Date().getFullYear();
+}
+
+const lastModifiedElement = document.getElementById('lastModified');
+if (lastModifiedElement) {
+  lastModifiedElement.innerHTML = `Last Updated: ${document.lastModified}`;
+}
+
+// Validation for organizational title (min 7 characters, letters/hyphens/spaces only)
+const titleInput = document.getElementById('organizationTitle');
+if (titleInput) {
+  titleInput.addEventListener('input', function(e) {
+    const pattern = /^[A-Za-z\-\s]{7,}$/;
+    if (this.value && !pattern.test(this.value)) {
+      this.setCustomValidity('Title must be at least 7 characters using only letters, hyphens or spaces.');
+    } else {
+      this.setCustomValidity('');
+    }
+  });
+}
+
+// Optional: Add phone input validation for better UX
+const phoneField = document.getElementById('phone');
+if (phoneField) {
+  phoneField.addEventListener('input', () => {
+    if (phoneField.value.trim() === '') {
+      phoneField.setCustomValidity('');
+    } else {
+      phoneField.setCustomValidity('');
+    }
+  });
+}

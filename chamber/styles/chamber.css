@@ -14,6 +14,14 @@
   --text: #222;
   --shadow: 0 4px 12px rgba(16,24,40,0.06);
   --success: #2b9348;
+
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.18);
+  --radius-card: 16px;
+  --transition: all 0.3s ease;
+  --gray-600: #666;
+  --accent-dark: #cc8f00;
   font-family: "Segoe UI", Roboto, system-ui, sans-serif;
 }
 
@@ -196,6 +204,15 @@ body {
   text-decoration: none;
 }
 
+.btn.active {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto 0;
+}
+
 /* Widgets */
 .widgets {
   display: grid;
@@ -318,14 +335,164 @@ form {
 
 form label {
   display: inline-block;
-  width: 200px;
+  width: 100%;
 }
 
 form input,
 form select,
 form textarea {
   display: inline-block;
-  width: calc(100% - 210px);
+  width: 100%;
   padding: 8px;
   vertical-align: middle;
 }
+
+.join-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .form-container {
+      flex: 2;
+      min-width: 280px;
+      background: var(--white);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 1.8rem;
+      transition: var(--transition);
+    }
+
+    .membership-sidebar {
+      flex: 1.2;
+      min-width: 260px;
+    }
+
+
+/* cards grid */
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .membership-card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1.2rem 1.2rem;
+      box-shadow: var(--shadow-sm);
+      border-left: 6px solid;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: fadeSlideUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) backwards;
+      cursor: pointer;
+    }
+
+    /* staggered animation delays */
+    .membership-card:nth-child(1) { animation-delay: 0.05s; border-left-color: #2b9348; }
+    .membership-card:nth-child(2) { animation-delay: 0.15s; border-left-color: #cd7f32; }
+    .membership-card:nth-child(3) { animation-delay: 0.25s; border-left-color: #b0b7bc; }
+    .membership-card:nth-child(4) { animation-delay: 0.35s; border-left-color: #f5b042; }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .membership-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-level {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-price {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .card-link {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 0.5rem;
+      text-decoration: underline;
+      transition: var(--transition);
+    }
+
+    .card-link:hover {
+      color: var(--accent-dark);
+    }
+  
+
+/* MODAL styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(3px);
+    }
+
+    .modal-content {
+      background: var(--white);
+      max-width: 500px;
+      width: 90%;
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      box-shadow: var(--shadow-md);
+      animation: modalPop 0.25s ease-out;
+    }
+
+    @keyframes modalPop {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-content h3 {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .modal-content ul {
+      margin: 1rem 0 1.2rem 1.2rem;
+      line-height: 1.5;
+    }
+
+    .modal-content li {
+      margin: 0.5rem 0;
+    }
+
+    .close-modal {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }

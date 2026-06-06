@@ -59,17 +59,21 @@
 
 
   <main class="wrap">
-    <h1>Lagos Chamber of Commerce</h1>
-    <h2 class="page-title">Member Directory</h2>
+    <h1>Thank You for Joining!</h1>
+    <p>We appreciate your interest in becoming a member of the Lagos Chamber of Commerce. Here is the information you submitted:</p>
 
-    <!-- View toggle buttons -->
-    <div class="view-toggle">
-      <button id="gridBtn" class="btn active">Grid View</button>
-      <button id="listBtn" class="btn">List View</button>
+    <div class="card">
+      <div class="meta">
+        <p><strong>First Name:</strong> <span id="outFirst"></span></p>
+        <p><strong>Last Name:</strong> <span id="outLast"></span></p>
+        <p><strong>Email:</strong> <span id="outEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="outPhone"></span></p>
+        <p><strong>Organization:</strong> <span id="outOrg"></span></p>
+        <p><strong>Date Submitted:</strong> <span id="outDate"></span></p>
+      </div>
     </div>
+  </main>
 
-    <!-- Directory container -->
-    <section id="membersContainer" class="directory grid"></section>
   </main>
 
   <!-- FOOTER -->
@@ -107,5 +111,18 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Get URL params
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("outFirst").textContent = params.get("firstName");
+    document.getElementById("outLast").textContent = params.get("lastName");
+    document.getElementById("outEmail").textContent = params.get("email");
+    document.getElementById("outPhone").textContent = params.get("phone");
+    document.getElementById("outOrg").textContent = params.get("organizationTitle");
+    document.getElementById("outDate").textContent = params.get("timestamp");
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
