@@ -65,33 +65,33 @@
         <div class="form-container">
 
           <form method="get" action="thankyou.html" id="membershipForm">
-              <label for="firstName">First Name:</label>
-              <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required>
+              <label for="firstName">First Name:
+              <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required></label>
 
-              <label for="lastName">Last Name:</label>
-              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="family-name" required>
+              <label for="lastName">Last Name:
+              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="family-name" required></label>
 
-              <label for="organization">Organization:</label>
-              <input name="organization" id="organization" title="Organization" type="text" autocomplete="organization" pattern="^[A-Za-z\- ]{7,}$" required>
+              <label for="organization">Organization:
+              <input name="organization" id="organization" title="Organization" type="text" autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$" required></label>
 
-              <label for="email">Email:</label>
-              <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required>
+              <label for="email">Email:
+              <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required></label>
 
-              <label for="phone">Mobile Phone</label>
-              <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+              <label for="phone">Mobile Phone
+              <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required></label>
               
 
-              <label for="membershipLevel">Membership Level:</label>
-              <select name="membershipLevel" id="membershipLevel" autocomplete="organization-title" required>
+              <label for="membershipLevel">Membership Level:
+              <select name="membershipLevel" id="membershipLevel" required>
                   <option value="" disabled selected>Select Membership Level</option>
                   <option value="NP Membership">NP Membership</option>
                   <option value="Bronze Membership">Bronze Membership</option>
                   <option value="Silver Membership">Silver Membership</option>
                   <option value="Gold Membership">Gold Membership</option>
-                  </select>
+                  </select></label>
               
-              <label for="description">Description:</label>
-              <textarea id="description" title="Description" name="description"></textarea>
+              <label for="description">Description:
+              <textarea id="description" title="Description" name="description"></textarea></label>
 
               <input type="hidden" name="timestamp" id="timestamp">
 
@@ -188,7 +188,6 @@
         </ul>
         <button class="close-modal">Close</button>
       </div>
-    </div>
     </div>
 
   </main>
