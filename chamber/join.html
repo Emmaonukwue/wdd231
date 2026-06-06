@@ -66,23 +66,23 @@
 
           <form method="get" action="thankyou.html" id="membershipForm">
               <label for="firstName">First Name:</label>
-              <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required/>
+              <input name="firstName" id="firstName" title="First Name" type="text" autocomplete="given-name" required>
 
               <label for="lastName">Last Name:</label>
-              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="family-name" required/>
+              <input name="lastName" id="lastName" title="Last Name" type="text" autocomplete="family-name" required>
 
-              <label for="organization">Organizational Title:</label>
-              <input name="organization" id="organization" title="Organizational Title" type="text" autocomplete="organization" pattern="^[A-Za-z\- ]{7,}$"/>
+              <label for="organization">Organization:</label>
+              <input name="organization" id="organization" title="Organization" type="text" autocomplete="organization" pattern="^[A-Za-z\- ]{7,}$" required>
 
               <label for="email">Email:</label>
-              <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required/>
+              <input name="email" id="email" type="email" title="Email" autocomplete="email" placeholder="user@website.com" required>
 
               <label for="phone">Mobile Phone</label>
               <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
               
 
               <label for="membershipLevel">Membership Level:</label>
-              <select name="membershipLevel" id="membershipLevel" required>
+              <select name="membershipLevel" id="membershipLevel" autocomplete="organization-title" required>
                   <option value="" disabled selected>Select Membership Level</option>
                   <option value="NP Membership">NP Membership</option>
                   <option value="Bronze Membership">Bronze Membership</option>
