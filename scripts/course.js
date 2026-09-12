@@ -58,6 +58,16 @@ const courses = [
         description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
         technology: ['HTML', 'CSS', 'JavaScript'],
         completed: false
+    },
+    {
+        subject: 'CSE',
+        number: 340,
+        title: 'Web Backend Development',
+        credits: 3,
+        certificate: 'Web and Computer Programming',
+        description: 'This programming course focuses on constructing dynamic websites using server-side languages, making use of databases and design patterns. Tha concepts introduced in Web Frontend Development courses are expected to be continued and implemented.',
+        technology: ['Node.js', 'MongoDB', 'Express', 'HTML', 'CSS', 'JavaScript'],
+        completed: true
     }
 ];
 
