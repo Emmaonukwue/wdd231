@@ -518,3 +518,145 @@ form textarea {
   font-weight: 600;
   margin-top: 0.5rem;
 }
+
+/* ============================================
+   DISCOVER PAGE — Visitor Message
+   ============================================ */
+.visitor-message {
+  background: #fff7e6;
+  border-left: 6px solid var(--accent);
+  color: #664d00;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  margin: 1rem 0 2rem;
+  font-weight: 500;
+}
+
+/* ============================================
+   DISCOVER PAGE — Grid Template Areas
+   ============================================ */
+
+/* ---------- SMALL: 320px – 640px ----------
+   Single column; alternating simple pattern   */
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5"
+    "c6"
+    "c7"
+    "c8";
+}
+
+.discover-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.discover-card h2 {
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.discover-card figure {
+  margin: 0 0 0.75rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.discover-card address {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
+}
+
+.discover-card .learn-more {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.discover-card .learn-more:hover {
+  background: #00304a;
+}
+
+/* Card 1..8 name -> grid area names */
+.card-1 { grid-area: c1; }
+.card-2 { grid-area: c2; }
+.card-3 { grid-area: c3; }
+.card-4 { grid-area: c4; }
+.card-5 { grid-area: c5; }
+.card-6 { grid-area: c6; }
+.card-7 { grid-area: c7; }
+.card-8 { grid-area: c8; }
+
+/* ============================================
+   MEDIUM: 641px – 1024px
+   3-column asymmetric layout using areas
+   ============================================ */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "c1 c1 c2"
+      "c3 c4 c2"
+      "c5 c6 c7"
+      "c8 c8 c7";
+  }
+}
+
+/* ============================================
+   LARGE: 1025px and above
+   4-column feature layout using areas
+   ============================================ */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+    grid-template-areas:
+      "c1 c1 c2 c2"
+      "c3 c4 c5 c6"
+      "c7 c8 c8 c8";
+  }
+}
+
+/* ============================================
+   HOVER EFFECT on images — desktop only
+   ============================================ */
+@media (min-width: 641px) {
+  .discover-card figure {
+    position: relative;
+  }
+  .discover-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  .discover-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.05) saturate(1.15);
+  }
+}
