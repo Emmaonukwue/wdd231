@@ -43,7 +43,7 @@ body {
 .site-header {
   background: white;
   border-bottom: 1px solid #e6e6e6;
-  position: relative;  
+  position: relative;   /* ← CHANGED: anchors the mobile dropdown */
 }
 .site-header .wrap {
   display: flex;
@@ -90,15 +90,16 @@ body {
 /* Hamburger */
 .hamburger {
   display: none;
-  font-size: 24px;             
+  font-size: 24px;              /* ← CHANGED: larger glyph */
+  background: transparent;
   border: 0;
   cursor: pointer;
-  padding: 10px 14px;           
-  color: var(--primary);        
-  border-radius: 6px;          
-  line-height: 1;               
+  padding: 10px 14px;           /* ← CHANGED: bigger touch target */
+  color: var(--primary);        /* ← CHANGED: visible color */
+  border-radius: 6px;           /* ← CHANGED */
+  line-height: 1;               /* ← CHANGED */
 }
-.hamburger:hover {              
+.hamburger:hover {              /* ← CHANGED */
   background: #eef2f5;
 }
 
@@ -317,18 +318,19 @@ body {
     flex-direction: column;
     background: white;
     position: absolute;
-    top: 100%;              
+    top: 100%;              /* ← CHANGED: anchors to bottom of header */
     right: 18px;
-    min-width: 180px;       
+    min-width: 180px;       /* ← CHANGED: prevents cramped menu */
     border-radius: 10px;
     padding: 12px;
-    box-shadow: var(--shadow-md);  
-    z-index: 100;          
-  .main-nav.open ul {      
+    box-shadow: var(--shadow-md);  /* ← CHANGED: stronger shadow */
+    z-index: 100;           /* ← CHANGED: sits above page content */
+  }
+  .main-nav.open ul {       /* ← CHANGED: stack links vertically */
     flex-direction: column;
     gap: 4px;
   }
-  .main-nav.open a {      
+  .main-nav.open a {        /* ← CHANGED: full-width tap targets */
     display: block;
     padding: 10px 12px;
   }
