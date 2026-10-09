@@ -101,7 +101,11 @@ body {
   margin: 18px 0;
   font-size: 22px;
 }
+
+/* Consolidated .view-toggle rule */
 .view-toggle {
+  display: flex;       /* Aligns buttons in a row */
+  gap: 10px;           /* Adds space between the buttons */
   margin-bottom: 14px;
 }
 .view-toggle .btn {
@@ -112,9 +116,14 @@ body {
   color: var(--primary);
   cursor: pointer;
 }
+/* Consolidated .view-toggle .btn.active rule */
 .view-toggle .btn.active {
+  display: inline-block; /* Keeps it inline with the other button */
+  margin: 0;             /* Removes the auto centering */
   background: var(--primary);
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .directory {
@@ -504,18 +513,3 @@ form textarea {
       font-weight: 600;
       margin-top: 0.5rem;
     }
-
-    /* Update the .view-toggle rule */
-.view-toggle {
-  display: flex;       /* Aligns buttons in a row */
-  gap: 10px;           /* Adds space between the buttons */
-  margin-bottom: 14px;
-}
-
-/* Add this specific rule to override the generic .btn.active */
-.view-toggle .btn.active {
-  display: inline-block; /* Keeps it inline with the other button */
-  margin: 0;             /* Removes the auto centering */
-  background: var(--primary);
-  color: white;
-}
