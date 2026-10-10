@@ -1,0 +1,196 @@
+/* ===== CSS Variables ===== */
+:root {
+  --primary: #1B2A4A;
+  --accent: #F2A900;
+  --bg: #F8F9FA;
+  --text: #2D2D2D;
+  --white: #FFFFFF;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3 {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li {
+  margin-bottom: 0.75rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+code {
+  background-color: #e9ecef;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--white);
+}
+
+header p {
+  color: #d0d7e2;
+  margin-bottom: 0;
+}
+
+/* ===== Main Sections ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: var(--white);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: var(--primary);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg);
+}
+
+/* ===== Color Swatches ===== */
+.swatch {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+.primary-swatch { background-color: var(--primary); }
+.accent-swatch  { background-color: var(--accent); }
+.bg-swatch      { background-color: var(--bg); }
+.text-swatch    { background-color: var(--text); }
+
+/* ===== Font Examples ===== */
+.poppins-example {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.opensans-example {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ===== Wireframes ===== */
+.wireframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.wireframe {
+  border: 2px dashed #888;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background-color: #fafafa;
+  flex: 1 1 300px;
+  max-width: 480px;
+  text-align: center;
+}
+
+.wireframe figcaption {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.wireframe img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 700px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  body { padding: 2rem; }
+}

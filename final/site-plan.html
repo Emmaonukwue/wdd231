@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Emmanuel Onukwue">
+  <meta name="description" content="Site plan for mStore – an online product showcase built with HTML, CSS, and JavaScript.">
+  <title>mStore Site Plan | WDD 231 - Emmanuel Onukwue</title>
+  <link rel="stylesheet" href="styles/plan.css">
+</head>
+<body>
+
+  <header>
+    <h1>mStore Site Plan</h1>
+    <p><strong>Emmanuel Onukwue Project Site Plan</strong></p>
+  </header>
+
+  <main>
+
+    <!-- Site Name -->
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>mStore</strong> — Online Product Showcase</p>
+      <p>
+        The name <em>mStore</em> was selected because it is short, memorable, and clearly
+        communicates an online store or product showcase. The "m" suggests "modern,"
+        "market," or simply a brandable prefix, while "Store" immediately tells visitors
+        what the site is about. The name is easy to type and works well as a domain
+        (e.g., <code>mstore.com</code>).
+      </p>
+    </section>
+
+    <!-- Site Purpose -->
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>
+        mStore is a dynamic product showcase website that allows visitors to browse a
+        curated collection of products fetched from the Fake Store API. The site provides:
+      </p>
+      <ul>
+        <li>A landing page featuring featured products and site navigation.</li>
+        <li>A products page that dynamically displays at least 15 products with
+            details such as title, price, category, and rating.</li>
+        <li>A contact page with a form that captures user inquiries and displays
+            submitted data on a form action page.</li>
+        <li>Interactive features including modal dialogs for product details,
+            local storage for user preferences, and responsive design for all devices.</li>
+      </ul>
+    </section>
+
+    <!-- Scenarios -->
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <p>These represent questions from the target audience that will drive the site's content:</p>
+      <ol>
+        <li>
+          <strong>Scenario 1:</strong> "I want to quickly browse a variety of products
+          and see their prices and ratings without having to visit multiple pages.
+          Can I do that here?"
+        </li>
+        <li>
+          <strong>Scenario 2:</strong> "I found a product I'm interested in. How can I
+          view more details about it and save my favorite products for later?"
+        </li>
+        <li>
+          <strong>Scenario 3:</strong> "I have a question about a product or want to
+          send feedback. Is there a way to contact the store directly?"
+        </li>
+      </ol>
+    </section>
+
+    <!-- Color Scheme -->
+    <section id="color-scheme">
+      <h2>Color Scheme</h2>
+      <p>The following colors were selected to create a clean, modern, and trustworthy look:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Hex Code</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch primary-swatch"></span> Deep Indigo</td>
+            <td><code>#1B2A4A</code></td>
+            <td>Header background, footer background, primary headings</td>
+          </tr>
+          <tr>
+            <td><span class="swatch accent-swatch"></span> Amber Gold</td>
+            <td><code>#F2A900</code></td>
+            <td>Buttons, accents, hover states, star ratings</td>
+          </tr>
+          <tr>
+            <td><span class="swatch bg-swatch"></span> Off-White</td>
+            <td><code>#F8F9FA</code></td>
+            <td>Page background, card backgrounds</td>
+          </tr>
+          <tr>
+            <td><span class="swatch text-swatch"></span> Charcoal</td>
+            <td><code>#2D2D2D</code></td>
+            <td>Body text, paragraphs</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        This palette uses the design principles of <strong>contrast</strong> (dark indigo
+        against off-white), <strong>repetition</strong> (consistent use of amber for
+        interactive elements), and <strong>alignment</strong> (clean, grid-based layout).
+      </p>
+    </section>
+
+    <!-- Typography -->
+    <section id="typography">
+      <h2>Typography</h2>
+      <p>Two Google Fonts are used to create a clean and readable hierarchy:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Font</th>
+            <th>Usage</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Poppins</strong> (sans-serif)</td>
+            <td>Headings, navigation, buttons</td>
+            <td class="poppins-example">Featured Product</td>
+          </tr>
+          <tr>
+            <td><strong>Open Sans</strong> (sans-serif)</td>
+            <td>Body text, paragraphs, form labels</td>
+            <td class="opensans-example">Browse our collection of products.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Poppins provides a modern, geometric look for headings, while Open Sans offers
+        excellent readability for body content. Both are loaded via Google Fonts.
+      </p>
+    </section>
+
+    <!-- Wireframe -->
+    <section id="wireframe">
+      <h2>Wireframe</h2>
+      <p>
+        The wireframes below show black-and-white sketches of the home page in both
+        small (mobile) and large (desktop/tablet) views. They focus on structure,
+        layout, and functionality before colors, images, and detailed design.
+      </p>
+
+      <div class="wireframe-container">
+        <figure class="wireframe">
+          <figcaption>Small Viewport (Mobile)</figcaption>
+          <img
+            src="images/wireframe-small.png"
+            alt="Hand-drawn wireframe of the mStore home page in a small mobile viewport, showing a hamburger menu, hero section, stacked product cards, and footer."
+            width="400"
+            height="600"
+            loading="lazy">
+        </figure>
+
+        <figure class="wireframe">
+          <figcaption>Large Viewport (Desktop/Tablet)</figcaption>
+          <img
+            src="images/wireframe-large.png"
+            alt="Hand-drawn wireframe of the mStore home page in a large desktop viewport, showing horizontal navigation, a wide hero section, a grid of product cards, and footer."
+            width="1920"
+            height="1080"
+            loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 mStore — WDD 231 Emmanuel Onukwue Project Site Plan</p>
+  </footer>
+
+</body>
+</html>
